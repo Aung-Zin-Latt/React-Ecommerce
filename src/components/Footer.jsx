@@ -1,20 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { BsLinkedin, BsGithub, BsYoutube, BsInstagram } from 'react-icons/bs'
+import newsletter from '../images/newsletter.png'
 
 const Footer = () => {
   return (
     <>
       <footer className="py-4">
-        <div className="container-xxl">
+        <div className="container">
           <div className="row align-items-center">
-            <div className="col-5">
+            <div className="col-md-5">
               <div className="footer-top-data d-flex gap-30 align-items-center">
-                <img src="images/newsletter.png" alt="News Letter Image" />
+                <img src={newsletter} alt="News Letter Image" />
                 <h3 className="mb-0 text-white">Sign Up for NewsLetter</h3>
               </div>
             </div>
-            <div className="col-7">
+            <div className="col-md-7">
               <div className="input-group">
                   <input 
                     type="text"
@@ -33,9 +34,9 @@ const Footer = () => {
       </footer>
 
       <footer className="py-4">
-        <div className="container-xxl">
+        <div className="container">
           <div className="row">
-            <div className="col-4">
+            <div className="col-md-4">
               <h4 className="text-white mb-4">Contact Us</h4>
               <div>
                 <address className="text-white fs-6">Home : 227 Mahar Bawga street,
@@ -70,17 +71,17 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-md-3">
               <h4 className="text-white mb-4">Information</h4>
               <div className="footer-link d-flex flex-column">
-                <Link className="text-white py-2 mb-1">Privacy Policy</Link>
-                <Link className="text-white py-2 mb-1">Refund Policy</Link>
-                <Link className="text-white py-2 mb-1">Shipping Policy</Link>
-                <Link className="text-white py-2 mb-1">Terms of Service</Link>
-                <Link className="text-white py-2 mb-1">Blogs</Link>
+                <Link to="/privacy-policy" className="text-white py-2 mb-1">Privacy Policy</Link>
+                <Link to="/refund-policy" className="text-white py-2 mb-1">Refund Policy</Link>
+                <Link to="/shipping-policy" className="text-white py-2 mb-1">Shipping Policy</Link>
+                <Link to="/term-conditions" className="text-white py-2 mb-1">Terms & Conditions</Link>
+                <Link to="/blogs" className="text-white py-2 mb-1">Blogs</Link>
               </div>
             </div>
-            <div className="col-3">
+            <div className="col-md-3">
               <h4 className="text-white mb-4">Account</h4>
               <div className="footer-link d-flex flex-column">
                 <Link className="text-white py-2 mb-1">Search</Link>
@@ -104,9 +105,9 @@ const Footer = () => {
       </footer>
 
       <footer className="py-4">
-        <div className="container-xxl">
+        <div className="container">
           <div className="row">
-            <div className="col-12 mb-0 text-white">
+            <div className="col-md-12 mb-0 text-white">
               <p className="text-center">&copy; { new Date().getFullYear() }; Powered by ITVisionHub</p>
             </div>
           </div>
