@@ -19,6 +19,8 @@ import RefundPolicy from './pages/RefundPolicy'
 import ShippingPolicy from './pages/ShippingPolicy'
 import TermAndCondition from './pages/TermAndCondition'
 import ProductDetails from './pages/ProductDetails'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 
 function App() {
 
@@ -35,6 +37,8 @@ function App() {
             <Route path='contactus' element={<Contact />} />
             <Route path='product' element={<OurStore />} />
             <Route path='product/:id' element={<ProductDetails />} />
+            <Route path='cart' element={<Cart />} />
+            <Route path='checkout' element={<Checkout />} />
             <Route path='compare-product' element={<CompareProduct />} />
             <Route path='wishlist' element={<Wishlist />} />
             <Route path='login' element={<Login />} />
