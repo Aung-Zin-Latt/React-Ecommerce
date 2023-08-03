@@ -2,6 +2,7 @@ import React from 'react'
 import Meta from '../components/Meta'
 import BreadCrumb from '../components/BreadCrumb'
 import { Link } from 'react-router-dom'
+import CustomInput from '../components/CustomInput'
 
 const ResetPassword = () => {
   return (
@@ -18,22 +19,16 @@ const ResetPassword = () => {
                             We will send you an email to reset your password
                         </p>
                         <form action="" className="d-flex flex-column gap-15">
-                            <div>
-                                <input 
-                                    type="password" 
-                                    name="password" 
-                                    className="form-control" 
-                                    placeholder="Password" 
-                                />
-                            </div>
-                            <div>
-                                <input 
-                                    type="password" 
-                                    name="confirm_password" 
-                                    className="form-control" 
-                                    placeholder="Comfirm Password" 
-                                />
-                            </div>
+                            <CustomInput
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                            />
+                            <CustomInput
+                                type="password"
+                                name="confirm_password"
+                                placeholder="Confirm Password"
+                            />
                             <div className="mt-0">
                                 <div className="d-flex justify-content-center gap-15 align-items-center">
                                     <button type="submit" className="button border-0">Submit</button>

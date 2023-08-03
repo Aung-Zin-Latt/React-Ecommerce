@@ -17,15 +17,25 @@ const ProductCard = (props) => {
 
   return (
     <>
-        <div className={` ${location.pathname == "/store" ? `gr-${grid}` : "col-md-3"} `}>
-            <Link to=":id" className="product-card position-relative">
+        <div className={` ${location.pathname == "/product" ? `gr-${grid}` : "col-md-3"} `}>
+            <Link 
+                to={`${
+                    // location.pathname == '/' ? 'product/:id' : ":id"}`} 
+                    location.pathname == '/' 
+                    ? 'product/:id' 
+                    : location.pathname === '/product/:id' 
+                    ? "/product/1"
+                    : " :id"
+                }`} 
+                className="product-card position-relative"
+            >
                 <div className="wishlist-icon position-absolute">
                     {/* eslint-disable-next-line */}
                     {/* <Link> */}
-                    <div>
+                    <button className="border-0 bg-transparent">
                         <img src={wish} alt="wishlist" />
                     {/* </Link> */}
-                    </div>
+                    </button>
                 </div>
                 <div className="product-image">
                     <img src={watch} className="img-fluid" alt="product image" />
@@ -49,30 +59,40 @@ const ProductCard = (props) => {
                 <div className="action-bar position-absolute">
                     <div className="d-flex flex-column gap-15">
                         {/* Put Link tag */}
-                        <div>
+                        <button className="border-0 bg-transparent">
                             <img src={productcompare} alt="compare" />
-                        </div>
-                        <div>
+                        </button>
+                        <button className="border-0 bg-transparent">
                             <img src={view} alt="view" />
-                        </div>
-                        <div>
+                        </button>
+                        <button className="border-0 bg-transparent">
                             <img src={addcart} alt="addcart" />
-                        </div>
+                        </button>
                     </div>
                 </div>
             </Link>
         </div>
 
 
-        <div className={` ${location.pathname == "/store" ? `gr-${grid}` : "col-md-3"} `}>
-            <Link className="product-card position-relative">
+        <div className={` ${location.pathname == "/product" ? `gr-${grid}` : "col-md-3"} `}>
+            <Link 
+                to={`${
+                    // location.pathname == '/' ? 'product/:id' : ":id"}`} 
+                    location.pathname == '/' 
+                    ? 'product/:id' 
+                    : location.pathname == '/product/:id' 
+                    ? "/product/1"
+                    : " :id"
+                }`} 
+                className="product-card position-relative"
+            >
                 <div className="wishlist-icon position-absolute">
                     {/* eslint-disable-next-line */}
                     {/* <Link> */}
-                    <div>
+                    <button className="border-0 bg-transparent">
                         <img src={wishlist} alt="wishlist" />
                     {/* </Link> */}
-                    </div>
+                    </button>
                 </div>
                 <div className="product-image">
                     <img src={watch} className="img-fluid" alt="product image" />
@@ -96,15 +116,15 @@ const ProductCard = (props) => {
                 <div className="action-bar position-absolute">
                     <div className="d-flex flex-column gap-15">
                         {/* Put Link tag */}
-                        <div>
+                        <button className="border-0 bg-transparent">
                             <img src={productcompare} alt="compare" />
-                        </div>
-                        <div>
+                        </button>
+                        <button className="border-0 bg-transparent">
                             <img src={view} alt="view" />
-                        </div>
-                        <div>
+                        </button>
+                        <button className="border-0 bg-transparent">
                             <img src={addcart} alt="addcart" />
-                        </div>
+                        </button>
                     </div>
                 </div>
             </Link>

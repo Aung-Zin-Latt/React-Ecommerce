@@ -1,20 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Container from './Container';
 
 const BreadCrumb = (props) => {
   const {title} = props;
   return (
-    <div className="breadcrumb mb-0 py-4">
-      <div className="container">
-        <div className="row">
-            <div className="col-md-12">
-                <p className="text-center mb-0">
-                    <Link to="/" className="text-dark">Home &nbsp;</Link> / {title}
-                </p>
-            </div>
-        </div>
+    <Container class1="breadcrumb mb-0 py-4">
+      <div className="row">
+          <div className="col-md-12">
+              <p className="text-center mb-0">
+                  <Link to="/" className="text-dark">Home &nbsp;</Link> / {title}
+              </p>
+          </div>
       </div>
-    </div>
+    </Container>
   )
 }
 
